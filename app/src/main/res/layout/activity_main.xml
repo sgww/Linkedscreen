@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="orisim3d.vinda.com.lianpingvideodemo.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_ip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="服务器地址：--" />
+
+        <TextView
+            android:id="@+id/tv_recieve_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="本地播放帧：--" />
+
+        <TextView
+            android:id="@+id/tv_serverfram"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="服务端播放帧：--" />
+
+        <TextView
+        android:id="@+id/tv_client_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="客户端连接情况--" />
+
+        <EditText
+            android:id="@+id/server_IP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="服务器地址"
+            android:textSize="10dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_connect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="连接服务器"
+                android:textSize="15dp" />
+
+            <Button
+                android:id="@+id/btn_send"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="客户端向服务端发送"
+                android:textSize="15dp" />
+
+            <Button
+                android:id="@+id/btn_send_to_c"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="服务端向所有客户端发送"
+                android:textSize="15dp" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <com.pili.pldroid.player.widget.PLVideoTextureView
+        android:id="@+id/pl_videoView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>
